@@ -1,6 +1,6 @@
 /* ==========================================================================
    PORTFOLIO INTERACTIVE LOGIC - ANDREY
-   Project Data (8 Projects Showcase including 3D & Video Hero Landings)
+   Project Data (8 Projects Showcase including Web-Optimized MP4 Videos)
    ========================================================================== */
 
 const PROJECTS = [
@@ -19,7 +19,7 @@ const PROJECTS = [
       "Интеграция Web3-компонентов и интерфейса управления узлами"
     ],
     media: [
-      { type: "video", url: "IMG_8244.MOV", label: "Web3 Helix 3D Interactive Demo" }
+      { type: "video", url: "IMG_8244.mp4", label: "Web3 Helix 3D Interactive Demo" }
     ]
   },
   {
@@ -37,7 +37,7 @@ const PROJECTS = [
       "Высокий уровень проработки деталей интерфейса в Figma и коде"
     ],
     media: [
-      { type: "video", url: "IMG_8511.MP4", label: "Aethel Atelier Showcase Demo" }
+      { type: "video", url: "IMG_8511.mp4", label: "Aethel Atelier Showcase Demo" }
     ]
   },
   {
@@ -55,7 +55,7 @@ const PROJECTS = [
       "Высокая конверсионность интерфейсных элементов"
     ],
     media: [
-      { type: "video", url: "IMG_8245.MP4", label: "Apex Performance Video Landing Demo" }
+      { type: "video", url: "IMG_8245.mp4", label: "Apex Performance Video Landing Demo" }
     ]
   },
   {
@@ -73,8 +73,8 @@ const PROJECTS = [
       "Интуитивный UX интерфейса AI-студии"
     ],
     media: [
-      { type: "video", url: "IMG_8724.MOV", label: "Deepfake Video Recast Demo" },
-      { type: "video", url: "IMG_8743.MP4", label: "Predict Viral Potential Demo" }
+      { type: "video", url: "IMG_8724.mp4", label: "Deepfake Video Recast Demo" },
+      { type: "video", url: "IMG_8743.mp4", label: "Predict Viral Potential Demo" }
     ]
   },
   {
