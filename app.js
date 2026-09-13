@@ -1,16 +1,70 @@
 /* ==========================================================================
    PORTFOLIO INTERACTIVE LOGIC - ANDREY
-   Project Data, Lightbox Modal Carousel & Copy Handlers
+   Project Data (8 Projects Showcase including 3D & Video Hero Landings)
    ========================================================================== */
 
 const PROJECTS = [
+  {
+    id: "web3-helix",
+    title: "Web3 Helix: Synthetic Dimension 3D",
+    categoryLabel: "Web3 & 3D Interactive Landing",
+    shortDesc: "Проектирование и разработка цифрового Web3-продукта с трехмерной интерактивной графикой, нейро-маршрутизацией и сайбер-эстетикой.",
+    fullDesc: "Работа над цифровым Web3-продуктом: структура продукта, пользовательские сценарии, интерфейс и дальнейшая реализация. Проработан 3D Hero-сектор с динамическими алгоритмическими узлами, интерактивная система навигации по объектам synthetic infrastructure и адаптивный UX под мобильные устройства и десктоп.",
+    tags: ["Web3", "3D Interactive", "Product Design", "Three.js / WebGL", "UI/UX", "React", "TypeScript"],
+    features: [
+      "Интерактивная 3D-графика и синтетическая динамическая анимация",
+      "Проработка структуры Web3-продукта и пользовательских сценариев (User Flow)",
+      "Адаптивный интерфейс кибер-эстетики с неоновой графикой",
+      "Оптимизированная трехмерная сцена высокого FPS",
+      "Интеграция Web3-компонентов и интерфейса управления узлами"
+    ],
+    media: [
+      { type: "video", url: "IMG_8244.MOV", label: "Web3 Helix 3D Interactive Demo" }
+    ]
+  },
+  {
+    id: "aethel-atelier",
+    title: "Aethel: Quiet Luxury Gem Atelier",
+    categoryLabel: "Luxury E-Commerce & 3D UX",
+    shortDesc: "Премиальный цифровой продукт для коллекционного дома камней с эффектом 3D-демонстрации и глубоким фокусом на визуал и взаимодействие.",
+    fullDesc: "Разработка цифрового продукта с акцентом на визуальную часть, UX, структуру страниц и пользовательское взаимодействие. Создана атмосфера тихой роскоши (Quiet Atelier) с интерактивным представлением эксклюзивных камней, трехмерным просмотром граней и продуманной анимацией прокрутки.",
+    tags: ["Product Design", "Quiet Luxury UX", "3D Showcase", "Figma", "Frontend", "User Flow"],
+    features: [
+      "Особый фокус на эстетику, типографику и физику взаимодействия",
+      "Проработка сценариев закрытого клубного каталога и бронирования",
+      "3D-презентация минералов и эксклюзивных коллекционных объектов",
+      "Плавный серфинг по разделам Philosophy, House & Collection",
+      "Высокий уровень проработки деталей интерфейса в Figma и коде"
+    ],
+    media: [
+      { type: "video", url: "IMG_8511.MP4", label: "Aethel Atelier Showcase Demo" }
+    ]
+  },
+  {
+    id: "apex-performance",
+    title: "Apex Performance: Video Hero Landing",
+    categoryLabel: "High-Motion Landing & Video Hero",
+    shortDesc: "Динамичный интерактивный лендинг для спорткаров с видео-хиро фоном, 3D-компонентами и онлайн-бронированием.",
+    fullDesc: "Проектирование и реализация высокодинамичного веб-продукта. Разработан фоновый видео-хиро сектор (Video Hero), интерактивные карточки услуг (Performance & Tire Service) и бесшовный процесс записи с анимациями отклика.",
+    tags: ["Video Hero", "UI/UX", "High-Motion UX", "JavaScript", "Frontend", "Figma Design"],
+    features: [
+      "Динамический фоновый Video Hero с бесшовной цикличностью",
+      "Проектирование быстрых пользовательских сценариев бронирования",
+      "Интерактивная галерея проектов и спортивных автомобилей",
+      "Оптимизация загрузки тяжелых видеоматериалов и скриптов",
+      "Высокая конверсионность интерфейсных элементов"
+    ],
+    media: [
+      { type: "video", url: "IMG_8245.MP4", label: "Apex Performance Video Landing Demo" }
+    ]
+  },
   {
     id: "robinzone-ai",
     title: "Robinzone AI: Viral Predict & Deepfake Recast",
     categoryLabel: "AI Product & Computer Vision",
     shortDesc: "Студийный AI-интерфейс для оценки виральности видеопотока (Memory Encoding) и замена лиц в динамичном видеоряде Deepfake Video Recast.",
     fullDesc: "Продукт на стыке UX/UI проектирования и искусственного интеллекта. Разработана структура интерфейса, проработаны сценарии пользователей, интерфейсы загрузки медиа, предпросмотра и интеграция нейросетевых моделей инференса.",
-    tags: ["Product Design", "AI Interfaces", "Computer Vision", "Claude Code / Cursor", "FastAPI", "React", "TypeScript"],
+    tags: ["Product Design", "AI Interfaces", "Computer Vision", "Claude Code / Cursor", "FastAPI", "React"],
     features: [
       "Проектирование пользовательских сценариев загрузки и рендеринга",
       "Оценка виральности видеоконтента (Memory Encoding metric)",
@@ -29,7 +83,7 @@ const PROJECTS = [
     categoryLabel: "Telegram Mini App & AI Digest",
     shortDesc: "Telegram Mini App с голосовым вводом задач, ИИ-сводками активности команды и автоматическим контролем/дожимом дедлайнов.",
     fullDesc: "Полный цикл от Figma-макета и User Flow до работающего Telegram Mini App. Сервис решает проблему контроля командной работы благодаря голосовому вводу, автоматической выжимке состояния задач и умному AI-напоминанию дедлайнов.",
-    tags: ["Telegram Mini Apps", "Product Design", "UI/UX", "Telegram API", "Voice AI", "Node.js", "Vibe Coding"],
+    tags: ["Telegram Mini Apps", "Product Design", "UI/UX", "Telegram API", "Voice AI", "Node.js"],
     features: [
       "User Flow и дизайн Telegram Mini App интерфейса",
       "Голосовое создание и классификация задач через LLM",
@@ -120,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupModalListeners();
 });
 
-// Render Projects Grid (Show all projects)
+// Render Projects Grid (Show all 8 projects)
 function renderProjects() {
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
