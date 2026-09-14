@@ -1,137 +1,141 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="is-loading">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Андрей | Product Designer & AI Full-Stack Developer</title>
-  <meta name="description" content="Портфолио Андрея: Product Designer, AI Product Designer & Full-stack Developer. 4 года опыта в разработке SaaS, AI-продуктов и Telegram Mini Apps.">
+  <title>Product Designer & AI Product Builder | UX/UI, SaaS, Telegram Mini Apps</title>
+  <meta name="description" content="Проектирование и создание цифровых продуктов на стыке Product Design, UX/UI и AI. Веб-приложения, SaaS, AI-сервисы, Telegram Mini Apps и AI-assisted development.">
   
   <!-- Open Graph Meta -->
-  <meta property="og:title" content="Андрей | Product Designer & AI Developer">
-  <meta property="og:description" content="Дизайн и разработка цифровых продуктов на стыке Figma, AI-assisted development (Claude Code, Cursor, Lovable) и полного стека.">
+  <meta property="og:title" content="Product Designer & AI Product Builder">
+  <meta property="og:description" content="Дизайн и разработка цифровых продуктов: от пользовательских сценариев и UX/UI в Figma до рабочего frontend, backend и AI-интеграций.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Press Start 2P, Silkscreen, Plus Jakarta Sans, VT323 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=VT323&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="crt-screen">
 
-  <!-- Background Ambient Glow Effects -->
-  <div class="bg-ambient">
-    <div class="glow-orb glow-1"></div>
-    <div class="glow-orb glow-2"></div>
-    <div class="glow-orb glow-3"></div>
+  <div class="page-loader" id="pageLoader" role="status" aria-live="polite">
+    <div class="loader-console">
+      <div class="loader-pixel-logo" aria-hidden="true"></div>
+      <p>LOADING PORTFOLIO</p>
+      <div class="loader-bar"><span id="loaderProgress"></span></div>
+      <small id="loaderLabel">PREPARING ASSETS...</small>
+    </div>
   </div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="nav-logo" id="navLogo">
-        <div class="logo-badge">A</div>
-        <span>Андрей</span>
-      </a>
+  <!-- CRT Monitor Scanline & Curved Glass Overlay -->
+  <div class="crt-overlay"></div>
 
-      <div class="nav-right">
-        <div class="status-tag" id="statusTag">
-          <span class="pulse-dot"></span>
-          <span>Доступен для проектов</span>
-        </div>
-        <a href="https://t.me/scarecrowterrier" target="_blank" class="tg-header-link">@scarecrowterrier</a>
-      </div>
+  <!-- Static pixel-arcade background -->
+  <div class="bg-ambient">
+    <div class="pixel-stars" aria-hidden="true"></div>
+    <div class="pixel-planet planet-pink" aria-hidden="true"></div>
+    <div class="pixel-planet planet-cyan" aria-hidden="true"></div>
+    <div class="pixel-mountains" aria-hidden="true"></div>
+    <div class="pixel-ground" aria-hidden="true"></div>
+  </div>
+
+  <!-- Arcade Machine Cabinet Frame Wrapper -->
+  <div class="arcade-cabinet-frame">
+
+    <!-- Top Arcade Marquee / Header Bar -->
+    <div class="arcade-marquee-bar">
+      <div class="marquee-item insert-coin">★ INSERT COIN ★</div>
+      <div class="marquee-item score-display">HIGH SCORE: 999990</div>
+      <div class="marquee-item credit-display">CREDITS: 02</div>
     </div>
-  </header>
+
+    <div class="arcade-screen-inner">
+      <!-- Navigation Bar -->
+      <header class="navbar">
+        <div class="container nav-container">
+          <div class="nav-right">
+            <div class="status-tag" id="statusTag">
+              <span class="pulse-dot"></span>
+              <span>1UP // READY FOR PROJECTS</span>
+            </div>
+            <a href="https://t.me/scarecrowterrier" target="_blank" class="tg-header-link">@scarecrowterrier</a>
+          </div>
+        </div>
+      </header>
 
   <main class="container">
-    
+
     <!-- Hero Section -->
     <section class="hero" id="heroSection">
       <div class="hero-role-badges">
-        <span class="role-badge">Product Designer</span>
-        <span class="role-badge accent">AI Product Designer</span>
-        <span class="role-badge">Full-Stack Developer</span>
+        <span class="role-badge">Product Design</span>
+        <span class="role-badge">AI Products</span>
+        <span class="role-badge accent">Web & SaaS</span>
+        <span class="role-badge">Telegram Mini Apps</span>
+        <span class="role-badge">AI-assisted Development</span>
       </div>
 
       <h1 class="hero-title">
-        Проектирую и создаю <br>
-        <span class="gradient-text">работающие AI & SaaS продукты</span>
+        Product Designer & <br>
+        <span class="gradient-text">AI Product Builder</span>
       </h1>
       
       <p class="hero-description">
-        4 года опыта в разработке цифровых продуктов. Работаю на стыке дизайна, продукта и кода: от пользовательского сценария и Figma до рабочего прототипа с помощью AI-assisted development и Vibe Coding.
+        Проектирую и создаю цифровые продукты на стыке <strong>product design, UX/UI и AI</strong>. Могу пройти весь путь от идеи и структуры продукта до готового интерфейса и работающего решения.
       </p>
 
       <!-- Value Proposition Highlight Cards -->
       <div class="highlights-grid" id="highlightsGrid">
         <div class="highlight-card">
-          <div class="highlight-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <div class="highlight-title">Дизайн + Продакшн Код</div>
-          <div class="highlight-desc">Самостоятельно прорабатываю UX, структуру в Figma и реализую рабочий продукт фронтенд + бэкенд.</div>
+          <div class="highlight-icon icon-design" aria-hidden="true"></div>
+          <div class="highlight-title">Product Design</div>
+          <div class="highlight-desc">Прорабатываю структуру цифровых продуктов, пользовательские сценарии, UX и продуманные интерфейсы.</div>
         </div>
 
         <div class="highlight-card">
-          <div class="highlight-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-indigo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-            </svg>
-          </div>
-          <div class="highlight-title">Vibe Coding & AI Tools</div>
-          <div class="highlight-desc">Ускоряю разработку с помощью Claude Code, Cursor, Lovable, OpenAI API и кастомных нейросетевых интеграций.</div>
+          <div class="highlight-icon icon-ai" aria-hidden="true"></div>
+          <div class="highlight-title">AI Products</div>
+          <div class="highlight-desc">Проектирую интерфейсы для AI-сервисов, автоматизации, AI-агентов и нейросетевых продуктов.</div>
         </div>
 
         <div class="highlight-card">
-          <div class="highlight-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-          </div>
-          <div class="highlight-title">Продуктовый подход</div>
-          <div class="highlight-desc">Фокус не просто на картинке, а на решении задачи пользователя, метриках и доведении продукта до выкатки.</div>
+          <div class="highlight-icon icon-web" aria-hidden="true"></div>
+          <div class="highlight-title">Web & SaaS</div>
+          <div class="highlight-desc">Создаю концепции и интерфейсы веб-приложений, SaaS-продуктов, личных кабинетов и сервисов со сложной логикой.</div>
         </div>
 
         <div class="highlight-card">
-          <div class="highlight-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-              <line x1="12" y1="18" x2="12.01" y2="18"></line>
-            </svg>
-          </div>
-          <div class="highlight-title">TG Mini Apps & Web3</div>
-          <div class="highlight-desc">Опыт проектирования и разработки Telegram Mini Apps, голосовых ботов и Web3/SaaS интерфейсов.</div>
+          <div class="highlight-icon icon-telegram" aria-hidden="true"></div>
+          <div class="highlight-title">Telegram Mini Apps</div>
+          <div class="highlight-desc">Проектирую и реализую интерфейсы Telegram Mini Apps с AI-функциями, задачами и интеграциями.</div>
         </div>
       </div>
     </section>
 
-    <!-- About Me & Skills Section -->
+    <!-- About Me & Approach Section -->
     <section class="about-section" id="aboutSection">
       <div class="section-header">
-        <h2 class="section-title">О себе и стек навыков</h2>
-        <p class="section-subtitle">Полный цикл разработки от первого наброска до готового сервиса</p>
+        <h2 class="section-title">Подход</h2>
+        <p class="section-subtitle">Дизайн начинается не с выбора цвета или шрифта, а с понимания задачи</p>
       </div>
 
       <div class="about-grid">
-        <!-- Left: Bio & Approach -->
+        <!-- Left: Approach & Bio -->
         <div class="about-card bio-card">
-          <h3 class="card-inner-title">Обо мне</h3>
+          <h3 class="card-inner-title">Как я работаю</h3>
           <p class="bio-text">
-            Product Designer с 4 годами опыта в разработке цифровых продуктов, веб-приложений, SaaS и AI-продуктов.
+            Сначала определяю структуру продукта и основные пользовательские сценарии, затем превращаю их в понятный интерфейс и проверяю, как дизайн работает уже в реальном продукте.
           </p>
           <p class="bio-text">
-            Могу самостоятельно проработать пользовательский сценарий, структуру продукта и интерфейс в Figma, собрать прототип, а затем реализовать рабочую версию продукта с помощью современных инструментов разработки и AI.
+            В работе уделяю внимание не только визуальной части, но и тому, <strong>как продукт работает для пользователя</strong>: пользовательским сценариям, структуре интерфейса, логике взаимодействия, состояниям системы и удобству использования.
           </p>
           <p class="bio-text">
-            Использую AI-инструменты как часть процесса разработки: для прототипирования, написания и рефакторинга кода, исследования технических решений и ускорения вывода продукта на рынок.
+            Использую современные AI-инструменты как часть рабочего процесса. В зависимости от задачи могу сочетать традиционные инструменты дизайна с <strong>Google Stitch, Cursor, Claude и AI-assisted development</strong>, а также самостоятельно работать с frontend, backend и API-интеграциями.
+          </p>
+          <p class="bio-text">
+            Поэтому в некоторых проектах я выступаю преимущественно как Product Designer, а в других совмещаю <strong>design, frontend и product development</strong>.
           </p>
           
           <div class="meta-pills">
@@ -208,11 +212,11 @@
       </div>
     </section>
 
-    <!-- Projects Section (3 on top, 2 centered below) -->
+    <!-- Projects Section -->
     <section class="projects-showcase" id="projectsShowcase">
       <div class="section-header">
-        <h2 class="section-title">Проекты и Реализованные Прототипы</h2>
-        <p class="section-subtitle">Примеры разработанных AI-интерфейсов, Telegram Mini Apps, SaaS и медиа-платформ</p>
+        <h2 class="section-title">Проекты</h2>
+        <p class="section-subtitle">Ниже собраны проекты, в которых я работал с разными типами цифровых продуктов: от Web3 и интерактивных сайтов до AI-сервисов, SaaS и Telegram Mini Apps.</p>
       </div>
 
       <div class="projects-grid" id="projectsGrid">
@@ -304,12 +308,15 @@
     <span id="toastMsg">Уведомление</span>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2026 Андрей | Product Designer & AI Full-Stack Developer</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2026 // PRODUCT DESIGNER & AI PRODUCT BUILDER // ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+
+    </div> <!-- End arcade-screen-inner -->
+  </div> <!-- End arcade-cabinet-frame -->
 
   <script src="app.js"></script>
 </body>
