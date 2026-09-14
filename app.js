@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PORTFOLIO INTERACTIVE LOGIC - ANDREY
+   PORTFOLIO INTERACTIVE LOGIC
    Project Data (8 Projects Showcase including Web-Optimized MP4 Videos)
    ========================================================================== */
 
