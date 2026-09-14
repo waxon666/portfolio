@@ -283,9 +283,20 @@ body {
 
 .nav-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
+
+.nav-wordmark {
+  color: var(--neon-cyan);
+  font-family: var(--font-pixel-title);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--neon-pink);
+}
+
+.nav-wordmark:hover { color: var(--neon-yellow); }
 
 .nav-logo {
   display: flex;
