@@ -143,6 +143,40 @@ body {
   background-position: 12px 24px, 55px 19px, 31px 73px, 102px 38px;
 }
 
+.pixel-stars::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #fff 0 1.5px, transparent 2px),
+    radial-gradient(circle, var(--neon-yellow) 0 1px, transparent 2.5px);
+  background-size: 137px 113px, 193px 181px;
+  background-position: 45px 33px, 12px 14px;
+  animation: twinkle-stars 3s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle-stars {
+  0% { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, #fff);
+  opacity: 0;
+  transform: rotate(-45deg);
+  animation: falling-star 9s infinite ease-in;
+}
+
+@keyframes falling-star {
+  0% { transform: translateY(-30vh) translateX(50vw) rotate(-45deg); opacity: 0; }
+  5% { opacity: 1; }
+  15% { opacity: 0; transform: translateY(80vh) translateX(-60vw) rotate(-45deg); }
+  100% { opacity: 0; }
+}
+
 /* CSS-built pixel planets, mountains and platform: deliberately static */
 .pixel-planet {
   position: absolute;
@@ -196,6 +230,48 @@ body {
     linear-gradient(90deg, transparent 0 20px, rgba(0, 240, 255, 0.18) 20px 24px, transparent 24px 48px) 0 0 / 48px 100%,
     #11082d;
   box-shadow: 0 -5px 0 var(--neon-pink), 0 -12px 0 rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.cyber-car {
+  position: absolute;
+  width: 24px;
+  height: 6px;
+  z-index: 3;
+}
+
+.car-left {
+  background: var(--neon-pink);
+  box-shadow: 6px -6px 0 var(--neon-cyan), 12px -6px 0 var(--neon-cyan), -4px 6px 0 #fff, 20px 6px 0 #fff;
+  bottom: 25%;
+  animation: driveRight 14s linear infinite;
+}
+
+.car-right {
+  background: var(--neon-cyan);
+  box-shadow: -6px -6px 0 var(--neon-yellow), -12px -6px 0 var(--neon-yellow), 4px 6px 0 #fff, -20px 6px 0 #fff;
+  bottom: 10%;
+  animation: driveLeft 20s linear infinite;
+  animation-delay: 2s;
+}
+
+.car-fast {
+  background: var(--neon-yellow);
+  box-shadow: 4px -4px 0 var(--neon-pink), 8px -4px 0 var(--neon-pink), -2px 4px 0 #fff, 16px 4px 0 #fff;
+  bottom: 60%;
+  width: 16px; height: 4px;
+  animation: driveRight 8s linear infinite;
+  animation-delay: 6s;
+}
+
+@keyframes driveRight {
+  0% { left: -100px; transform: scaleX(1); }
+  100% { left: 110vw; transform: scaleX(1); }
+}
+
+@keyframes driveLeft {
+  0% { right: -100px; transform: scaleX(1); }
+  100% { right: 110vw; transform: scaleX(1); }
 }
 
 /* CRT Screen Scanline Overlay */
@@ -653,11 +729,18 @@ body {
   font-family: var(--font-pixel-tag);
   font-size: 0.78rem;
   color: var(--neon-pink);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
   letter-spacing: 0.05em;
+}
+
+.skill-group-desc {
+  font-size: 0.9rem;
+  color: #a29bb8;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
 }
 
 .tags-flex {
