@@ -1209,6 +1209,8 @@ footer {
   .nav-right { display: none; }
   .project-card { width: 100%; }
   .contact-actions { flex-direction: column; align-items: center; }
+  .contact-card { padding: 2rem 1rem; }
+  .btn-primary { flex-direction: column; padding: 1rem; width: 100%; max-width: 280px; }
   .modal-container { width: 98%; height: 98vh; }
   .planet-pink { width: 132px; height: 132px; right: 4vw; }
   .planet-cyan { width: 72px; height: 72px; }
