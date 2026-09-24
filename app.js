@@ -223,7 +223,7 @@ function renderProjects() {
       <div class="project-card" onclick="openModal('${project.id}')">
         <div class="card-media">
           ${isVideo ? `
-            <video src="${encodeURI(coverMedia.url)}" preload="auto" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+            <video src="${encodeURI(coverMedia.url)}#t=0.5" preload="metadata" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
             <div class="media-badge">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               VIDEO DEMO
