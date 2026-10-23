@@ -202,7 +202,6 @@ h2{font:clamp(16px,2.2vw,26px)/1.4 var(--px);margin:0 0 14px;color:var(--pk);tex
 .hud .language-trigger{height:44px;min-width:72px;padding:0 10px;display:flex;align-items:center;justify-content:space-between;gap:9px;background:#05020a;color:var(--cy);border:3px solid var(--cy);border-radius:0;box-shadow:4px 4px 0 var(--pk);font:10px var(--px);letter-spacing:1px;text-transform:uppercase;cursor:pointer;white-space:nowrap}
 .hud .language-trigger:active,.hud .language-trigger[aria-expanded="true"]{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--pk)}
 .hud .language-trigger:focus-visible,.language-options button:focus-visible{outline:2px solid var(--yl);outline-offset:3px}
-.pixel-caret{width:9px;height:7px;background:var(--yl);clip-path:polygon(0 0,33% 0,33% 33%,66% 33%,66% 66%,100% 66%,100% 100%,0 100%);transform:rotate(90deg)}
 .language-options{display:none;position:absolute;top:100%;left:0;z-index:1000;min-width:100%;padding:3px;background:#05020a;border:3px solid var(--cy);border-radius:0;box-shadow:4px 4px 0 var(--pk)}
 .language-options button{position:relative;width:100%;min-height:44px;padding:0 12px 0 25px;text-align:left;background:#05020a;color:var(--cy);border:0;border-radius:0;border-bottom:1px solid #1a0f38;font:10px var(--px);letter-spacing:1px;text-transform:uppercase;cursor:pointer}
 .language-options button:last-child{border-bottom:0}
@@ -227,7 +226,7 @@ h2{font:clamp(16px,2.2vw,26px)/1.4 var(--px);margin:0 0 14px;color:var(--pk);tex
 <header class="hud"><div class="wrap"><div class="brand"><b>WAX</b><i>// FULL-STACK &amp; ARCHITECT</i></div>
 
 <nav><a href="#approach" data-i18n="nav.approach">Подход</a><a href="#projects" data-i18n="nav.projects">Проекты</a></nav><div class="language-switch" id="languageSwitch">
-<button class="language-trigger" id="languageTrigger" type="button" aria-label="Выбрать язык" aria-haspopup="listbox" aria-expanded="false"><span id="languageCurrent">RU</span><span class="pixel-caret" aria-hidden="true"></span></button>
+<button class="language-trigger" id="languageTrigger" type="button" aria-label="Выбрать язык" aria-haspopup="listbox" aria-expanded="false"><span id="languageCurrent">RU</span></button>
 <div class="language-options" id="languageOptions" role="listbox" aria-label="Язык сайта" aria-hidden="true">
 <button type="button" role="option" data-lang="ru" aria-selected="true" tabindex="-1">RU</button><button type="button" role="option" data-lang="en" aria-selected="false" tabindex="-1">EN</button><button type="button" role="option" data-lang="es" aria-selected="false" tabindex="-1">ES</button>
 </div></div><span class="ready">▮ 1UP // READY FOR PROJECTS</span><a class="btn sm" data-tg data-tgt="@" data-contact-label="header"></a></div></header>
