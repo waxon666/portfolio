@@ -202,7 +202,11 @@ h2{font:clamp(16px,2.2vw,26px)/1.4 var(--px);margin:0 0 14px;color:var(--pk);tex
 
 <header class="hud"><div class="wrap"><div class="brand"><b>WAX</b><i>// FULL-STACK &amp; ARCHITECT</i></div>
 
-<nav><a href="#approach" data-i18n="nav.approach">Подход</a><a href="#projects" data-i18n="nav.projects">Проекты</a></nav><div class="language-switch" role="group" aria-label="Select language"><button type="button" data-lang="ru" aria-label="Русский" aria-pressed="true">RU</button><button type="button" data-lang="es" aria-label="Español" aria-pressed="false">ES</button><button type="button" data-lang="en" aria-label="English" aria-pressed="false">EN</button></div><span class="ready">▮ 1UP // READY FOR PROJECTS</span><a class="btn sm" data-tg data-tgt="@" data-contact-label="header"></a></div></header>
+<nav><a href="#approach" data-i18n="nav.approach">Подход</a><a href="#projects" data-i18n="nav.projects">Проекты</a></nav><div class="language-switch" id="languageSwitch">
+<button class="language-trigger" id="languageTrigger" type="button" aria-label="Выбрать язык" aria-haspopup="listbox" aria-expanded="false"><span id="languageCurrent">RU</span><span class="pixel-caret" aria-hidden="true"></span></button>
+<div class="language-options" id="languageOptions" role="listbox" aria-label="Язык сайта" aria-hidden="true">
+<button type="button" role="option" data-lang="ru" aria-selected="true" tabindex="-1">RU</button><button type="button" role="option" data-lang="en" aria-selected="false" tabindex="-1">EN</button><button type="button" role="option" data-lang="es" aria-selected="false" tabindex="-1">ES</button>
+</div></div><span class="ready">▮ 1UP // READY FOR PROJECTS</span><a class="btn sm" data-tg data-tgt="@" data-contact-label="header"></a></div></header>
 
 <main>
 
@@ -307,8 +311,27 @@ h2{font:clamp(16px,2.2vw,26px)/1.4 var(--px);margin:0 0 14px;color:var(--pk);tex
 const CFG={tg:'scarecrowterrier'};   // единый контакт — меняется только здесь
 
 document.querySelectorAll('[data-tg]').forEach(a=>{a.href='https://t.me/'+CFG.tg;a.target='_blank';a.rel='noopener';a.textContent=a.dataset.tgt+(a.dataset.tgt.endsWith('@')?CFG.tg:'')});
-document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
 
+
+
+// Accessible arcade-style language dropdown
+const languageSwitch=document.getElementById('languageSwitch');
+const languageTrigger=document.getElementById('languageTrigger');
+const languageOptions=document.getElementById('languageOptions');
+const languageButtons=[...languageOptions.querySelectorAll('[role="option"]')];
+let languageCloseTimer;
+function openLanguageMenu(focusSelected=false){clearTimeout(languageCloseTimer);languageSwitch.classList.remove('closing');languageSwitch.classList.add('open');languageTrigger.setAttribute('aria-expanded','true');languageOptions.setAttribute('aria-hidden','false');if(focusSelected){const selected=languageButtons.findIndex(button=>button.dataset.lang===currentLanguage);languageButtons[selected<0?0:selected].focus()}}
+function closeLanguageMenu(returnFocus=false){if(!languageSwitch.classList.contains('open'))return;languageSwitch.classList.remove('open');languageSwitch.classList.add('closing');languageTrigger.setAttribute('aria-expanded','false');languageOptions.setAttribute('aria-hidden','true');languageCloseTimer=setTimeout(()=>languageSwitch.classList.remove('closing'),120);if(returnFocus)languageTrigger.focus()}
+languageTrigger.addEventListener('click',()=>languageSwitch.classList.contains('open')?closeLanguageMenu():openLanguageMenu());
+languageButtons.forEach((button,index)=>button.addEventListener('click',()=>{setLanguage(button.dataset.lang);closeLanguageMenu(true)}));
+document.addEventListener('click',event=>{if(!languageSwitch.contains(event.target))closeLanguageMenu()});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&languageSwitch.classList.contains('open')){event.preventDefault();closeLanguageMenu(true);return}
+  if(!languageSwitch.classList.contains('open'))return;
+  const activeIndex=languageButtons.indexOf(document.activeElement);
+  if(event.key==='ArrowDown'||event.key==='ArrowUp') {event.preventDefault();openLanguageMenu();const start=activeIndex<0?languageButtons.findIndex(button=>button.dataset.lang===currentLanguage):activeIndex;const direction=event.key==='ArrowDown'?1:-1;languageButtons[(start+direction+languageButtons.length)%languageButtons.length].focus()}
+});
+languageTrigger.addEventListener('keydown',event=>{if(event.key==='ArrowDown'||event.key==='ArrowUp'){event.preventDefault();event.stopPropagation();openLanguageMenu(true)}});
 
 // pixel icons
 

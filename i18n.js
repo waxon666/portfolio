@@ -49,7 +49,10 @@ function setLanguage(lang) {
     const active = button.dataset.lang === selected;
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
+    button.setAttribute("aria-selected", String(active));
   });
+  const currentLanguageLabel = document.getElementById("languageCurrent");
+  if (currentLanguageLabel) currentLanguageLabel.textContent = selected.toUpperCase();
   try { localStorage.setItem("portfolio-language", selected); } catch (_) {}
   if (typeof refreshLocalizedContent === "function") refreshLocalizedContent();
 }
