@@ -1268,3 +1268,10 @@ footer {
   .planet-cyan { width: 72px; height: 72px; }
   .arcade-marquee-bar { font-size: 0.65rem; padding: 0.5rem 0.8rem; }
 }
+
+/* Language selector */
+.language-switch{display:flex;align-items:center;gap:3px;flex:0 0 auto}
+.language-switch button{font:inherit;font-size:.72rem;line-height:1;padding:.5rem .42rem;color:var(--text-muted);background:transparent;border:1px solid transparent;border-radius:4px;cursor:pointer}
+.language-switch button.active{color:var(--neon-cyan);border-color:var(--neon-cyan)}
+.language-switch button:focus-visible{outline:2px solid var(--neon-yellow);outline-offset:2px}
+@media(max-width:700px){.hud .wrap{flex-wrap:wrap}.language-switch{margin-left:auto} .hud nav{order:3;width:100%;justify-content:center}}
